@@ -41,7 +41,7 @@ void FutabaVFD::begin(uint8_t numColumns)
 
 void FutabaVFD::send(uint8_t data)
 {
-    for (unsigned int mask = 0x80, i=0;i<8;i++,mask >>=1)
+    for (unsigned int mask = 0x80, i = 0; i < 8; i++, mask >>= 1)
     {
         digitalWrite(_clk_pin, HIGH);
         delayMicroseconds(15);
